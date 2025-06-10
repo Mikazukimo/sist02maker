@@ -8,13 +8,9 @@ services:
   app:
     build:
       context: ./
-      dockerfile: ./docker/nim/Dockerfile
-    command: ["bash", "-c", "/root/scripts/run-server.sh"] # コンテナ起動時上で定義したシェルを実行
-    volumes:
-      - ./nim_lang/:/root/nim_lang
-      - ./docker/nim/scripts/:/root/scripts # サーバー起動スクリプトをマウント
+      dockerfile: ./Dockerfile
     environment: *api-vars # 環境変数の読込み
     ports:
-      - "50000:5000" # バインドするポート番号(コンテナのそとからのアクセスは50000ポートで指定)
+      - "50000:5000" #バインドするポート番号(コンテナのそとからのアクセスは50000ポートで指定)
     tty: true
     privileged: true
