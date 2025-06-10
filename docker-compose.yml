@@ -1,0 +1,20 @@
+version: '3.8'
+
+x-api-vars: &api-vars
+  COMPOSE_PROJECT_NAME: nim_api_development
+  NIM_ENV: development
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: ./docker/nim/Dockerfile
+    command: ["bash", "-c", "/root/scripts/run-server.sh"] # コンテナ起動時上で定義したシェルを実行
+    volumes:
+      - ./nim_lang/:/root/nim_lang
+      - ./docker/nim/scripts/:/root/scripts # サーバー起動スクリプトをマウント
+    environment: *api-vars # 環境変数の読込み
+    ports:
+      - "50000:5000" # バインドするポート番号(コンテナのそとからのアクセスは50000ポートで指定)
+    tty: true
+    privileged: true
