@@ -11,3 +11,4 @@ srcDir        = "src"
 
 requires "nim >= 1.6.14"
 requires "jester"
+requires "nimja" 
