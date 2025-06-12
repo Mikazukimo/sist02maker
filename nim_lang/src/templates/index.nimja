@@ -1,8 +1,15 @@
 {% extends ./templates/partials/_master.nimja%}
 
 {% block content %}
-  <h1>This is a test text.</h1>
-  <h2>いいけどこれ補完効かないから書くのしんどそうだな</h2>
+  <h1>SIST02メーカー</h1>
+  <h2>ISBNかDOIを入れてくれると自動的にSIST02にしてくれるようなプログラムです。</h2>
+  <p>ISBNやDOIを入力して、SIST02形式の引用を生成します。</p>
+  <form action="/sist02" method="post">
+    <label for="input">ISBNまたはDOIを入力してください:</label><br>
+    <input type="text" id="input" name="input" required>
+    <button type="submit">変換</button>
+  </form>
+  <p>まだできないけどね。</p>
 {% endblock %}
 
 {% block footer %}
