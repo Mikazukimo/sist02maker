@@ -44,11 +44,17 @@ routes:
   get "/":
     let title = "Nim Language - Sist02 Maker"
     resp renderIndex(title)
+
+  get "/test":
+    echo "helloworld"
+    let title = "aaaaaaaaa"
+    resp renderIndex(title)
+
   post "/sist02":
     echo "TEST"
-    let raw :string= request.params["isbn"]
+    let raw: string = request.params["isbn"]
     let isbn = raw.replace("-", "")
-    let ans = isbn_searcher(isbn) 
+    let ans = isbn_searcher(isbn)
     resp renderAns(ans)
 
 runForever()

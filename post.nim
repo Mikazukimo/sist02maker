@@ -1,17 +1,18 @@
-import jester, strutils, htmlgen
+# Issue #22
+
+import os,  jester, asyncdispatch
 
 routes:
   get "/":
-    resp htmldoc():
-      body():
-        h1("名前を入力してください")
-        form(action="/greet", method="post"):
-          input(`type`="text", name="username")
-          input(`type`="submit", value="送信")
+    var html = ""
+    for file in walkFiles("*.*"):
+      html.add "<li>" & file & "</li>"
+    html.add "<form action=\"test\" method=\"post\">"
+    html.add "<input type=\"form\" name=\"file\">"
+    html.add "<input type=\"submit\" value=\"Submit\" name=\"submit\">"
+    html.add "</form>"
+    resp(html)
 
-  post "/greet":
-    let name = request.params["username"]
-    resp htmldoc():
-      body():
-        h1("こんにちは、" & escapeHtml(name) & "さん！")
-        a(href="/", "戻る")
+  post "/test":
+    resp(request.params["file"])
+runForever()
