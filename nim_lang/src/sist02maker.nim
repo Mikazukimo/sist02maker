@@ -1,12 +1,13 @@
 import jester,nimja, os
 
-proc renderIndex(): string =
-  compileTemplateFile("./templates/test.html", baseDir = getScriptDir())
+proc renderIndex(title:string): string =
+  compileTemplateFile("./templates/index.nimja", baseDir = getScriptDir)
+  echo "done"
 
 routes:
   get "/":
-    resp renderIndex()
-    #resp compileTemplateFile("./templates/test.html", baseDir = getScriptDir())
-    
+    let title = "Nimja Template Example"
+    echo title
+    resp renderIndex(title)
 
 runForever()

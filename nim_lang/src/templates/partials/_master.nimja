@@ -1,22 +1,17 @@
-{#
-
-  This template is later expanded from the index.nimja template.
-  All blocks are filled by the blocks from index.nimja
-
-  Variables are also useable.
- #}
 <html>
-<head>
-  <title>{{title}}</title>
-</head>
+    <head>
+        <meta  http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+        <title>
+            インターネット広告について
+            パスファインダー, インターネット広告
+        </title>
+    </head>
 <body>
 
-<style>
-body {
-  background-color: aqua;
-  color: red;
-}
-</style>
 
 {# The master can declare a variable that is later visible in the child template #}
 {% var aVarFromMaster = "aVarFromMaster" %}

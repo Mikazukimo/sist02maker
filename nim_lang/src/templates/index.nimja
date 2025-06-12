@@ -1,22 +1,10 @@
 {% extends ./templates/partials/_master.nimja%}
 
 {% block content %}
-  <h1>Random links</h1>
-  {% const links = [
-    (title: "google", target: "https://google.de"),
-    (title: "fefe", target: "https://blog.fefe.de")]
-  %}
-  {% for (ii, item) in links.pairs() %}
-    {{ii}} <a href="{{item.target}}">This is a link to: {{item.title}}</a><br>
-  {% endfor %}
-
-  <h1>Members</h1>
-    {% for (idx, user) in users.pairs %}
-        <a href="/users/{{idx}}">{% importnimja "./templates/partials/_user.nimja" %}</a><br>
-    {% endfor %}
+  <h1>This is a test text.</h1>
+  <h2>いいけどこれ補完効かないから書くのしんどそうだな</h2>
 {% endblock %}
 
 {% block footer %}
-  {% var user = users.sample() %}
-  This INDEX was presented by.... {% importnimja "./templates/partials/_user.nimja" %}
-{% endblock footer %} {# the 'footer' in endblock is completely optional #}
+    This is a test footer.
+{% endblock footer %}
