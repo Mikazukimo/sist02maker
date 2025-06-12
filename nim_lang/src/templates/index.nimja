@@ -3,11 +3,11 @@
 {% block content %}
 <body>
   <h1>{{title}}</h1>
-  <h2>ISBNかDOIを入れてくれると自動的にSIST02にしてくれるようなプログラムになるはずです。</h2>
-  <p>ISBNやDOIを入力して、SIST02形式の引用を生成するはずです。</p>
+  <h2>ISBNを入れてくれると自動的にSIST02にしてくれるようなプログラムになるはずです。</h2>
+  <p>ISBNを入力して、SIST02形式の引用を生成するはずです。</p>
   <form action="/sist02" method="post">
-    <label for="input">ISBNまたはDOIを入力してください:</label><br>
-    <input type="text" id="querytext" name="input" required>
+    <label for="input">ISBNを入力してください:</label><br>
+    <input type="text" name="isbn" required>
     <button type="submit">変換</button>
   </form>
   <p>まだできないけどね。</p>

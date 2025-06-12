@@ -1,0 +1,10 @@
+{% extends ./templates/partials/_master.nimja%}
+
+{% block content %}
+<body>
+  <h1>{{ans}}</h1>
+{% endblock %}
+
+{% block footer %}
+    This is a test footer.
+{% endblock footer %}
