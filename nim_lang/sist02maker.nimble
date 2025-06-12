@@ -9,6 +9,6 @@ srcDir        = "src"
 
 # Dependencies
 
-requires "nim >= 2.2.2"
+requires "nim >= 1.6.14"
 requires "jester"
 requires "nimja" 
