@@ -1,13 +1,8 @@
 {% extends ./templates/partials/_master.nimja%}
 
 {% block content %}
-  <div id="sidebar">
-    <h2>目次</h2>
-            <ul>
-                <li><a href="#chapter1">メモ</a></li>
-            </ul>
-        </div>
-  <h1 id="chapter1">{{title}}</h1>
+<body>
+  <h1>{{title}}</h1>
   <h2>ISBNかDOIを入れてくれると自動的にSIST02にしてくれるようなプログラムになるはずです。</h2>
   <p>ISBNやDOIを入力して、SIST02形式の引用を生成するはずです。</p>
   <form action="/sist02" method="post">
@@ -16,6 +11,7 @@
     <button type="submit">変換</button>
   </form>
   <p>まだできないけどね。</p>
+</body>
 {% endblock %}
 
 {% block footer %}
