@@ -5,6 +5,7 @@ proc renderIndex(title:string): string =
 
 routes:
   get "/":
-    let title = "this is demo site"
+    let title = "Nim Language - Sist02 Maker"
     resp renderIndex(title)
+
 runForever()
