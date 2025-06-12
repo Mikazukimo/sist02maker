@@ -6,8 +6,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
         <title>
-            インターネット広告について
-            パスファインダー, インターネット広告
+          Nimja Template Site
         </title>
     </head>
 <body>
@@ -18,8 +17,6 @@
 
 {# We import templates to keep the master small #}
 {% importnimja "./templates/partials/_menu.nimja" %}
-
-<h1>{{title}}</h1>
 
 {# This block is filled from the child templates #}
 {%block content%}{%endblock%}

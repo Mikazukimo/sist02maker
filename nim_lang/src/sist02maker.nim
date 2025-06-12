@@ -5,6 +5,6 @@ proc renderIndex(title:string): string =
 
 routes:
   get "/":
-    let title = "Nimja Template Example"
+    let title = "this is demo site"
     resp renderIndex(title)
 runForever()

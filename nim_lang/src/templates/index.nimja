@@ -1,12 +1,18 @@
 {% extends ./templates/partials/_master.nimja%}
 
 {% block content %}
-  <h1>SIST02メーカー</h1>
-  <h2>ISBNかDOIを入れてくれると自動的にSIST02にしてくれるようなプログラムです。</h2>
-  <p>ISBNやDOIを入力して、SIST02形式の引用を生成します。</p>
+  <div id="sidebar">
+    <h2>目次</h2>
+            <ul>
+                <li><a href="#chapter1">メモ</a></li>
+            </ul>
+        </div>
+  <h1 id="chapter1">{{title}}</h1>
+  <h2>ISBNかDOIを入れてくれると自動的にSIST02にしてくれるようなプログラムになるはずです。</h2>
+  <p>ISBNやDOIを入力して、SIST02形式の引用を生成するはずです。</p>
   <form action="/sist02" method="post">
     <label for="input">ISBNまたはDOIを入力してください:</label><br>
-    <input type="text" id="input" name="input" required>
+    <input type="text" id="querytext" name="input" required>
     <button type="submit">変換</button>
   </form>
   <p>まだできないけどね。</p>
