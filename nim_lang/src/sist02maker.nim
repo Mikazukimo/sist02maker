@@ -25,7 +25,7 @@ proc isbn_searcher(isbn:string):string=
                               publisher = item.innerText
                           of "dc:date":
                               date = item.innerText
-      let ans = author & ".'" & title & "'." & publisher & "." & date & "."
+      let ans = author & ". " & title & ". " & publisher & ", " & date & "."
       echo ans
       return ans
   except HttpRequestError as e:
