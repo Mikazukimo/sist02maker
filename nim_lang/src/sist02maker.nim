@@ -94,9 +94,12 @@ routes:
   post "/sist02":
     let raw_isbn: string = request.params["isbn"]
     let raw_doi: string = request.params["doi"]
-    let isbn = raw_isbn.replace("-", "")
-    let respons_isbn = isbn_searcher(isbn)
-    let respons_doi = doi_searcher(raw_doi)
+    var isbn,respons_isbn,respons_doi = ""
+    if raw_isbn != "":
+        isbn = raw_isbn.replace("-", "")
+        respons_isbn = isbn_searcher(isbn)
+    if raw_doi != "":
+        respons_doi = doi_searcher(raw_doi)
     resp renderAns(respons_isbn,respons_doi)
 
 runForever()
