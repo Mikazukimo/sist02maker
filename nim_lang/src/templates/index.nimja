@@ -6,8 +6,9 @@
   <h2>ISBNを入れてくれると自動的にSIST02にしてくれるようなプログラムになるはずです。</h2>
   <p>ISBNを入力して、SIST02形式の引用を生成するはずです。</p>
   <form action="/sist02" method="post">
-    <label for="input">ISBNを入力してください:</label><br>
-    <input type="text" name="isbn" required>
+    <p><label for="input">ISBNを入力してください:</label></p>
+    <p>ISBN：<input type="text" name="isbn"></p>
+    <p>（まだ工事中なので入れないでほしいです）doiの"10.20651/jslis.65.2_84"みたいなところだけ入れる：<input type="text" name="doi"></p>
     <button type="submit">変換</button>
   </form>
   <p>今後の予定：DOIからもできるようにしたい。もうちょっとデザイン良くしたい。</p>
