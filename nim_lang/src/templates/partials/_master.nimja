@@ -6,7 +6,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
         <title>
-          Nimja Template Site
+          SIST02 Maker by zukimo
         </title>
     </head>
 
@@ -21,11 +21,6 @@
 {% block content %}{% endblock %}
 
 
-{#
-  If the block contains content and is NOT overwritten later.
-  The content from the master is rendered
-#}
-{% block onlyMasterBlock %}Only Master Block{% endblock %}
 
 <footer>
   {% block footer %}{% endblock %}

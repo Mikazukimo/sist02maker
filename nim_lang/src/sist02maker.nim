@@ -37,8 +37,8 @@ proc isbn_searcher(isbn:string):string=
 proc renderIndex(title:string): string =
   compileTemplateFile("./templates/index.nimja", baseDir = getScriptDir)
 
-proc renderAns(title:string): string =
-  compileTemplateFile("./templates/index.nimja", baseDir = getScriptDir)
+proc renderAns(ans:string): string =
+  compileTemplateFile("./templates/ans.nimja", baseDir = getScriptDir)
 
 routes:
   get "/":

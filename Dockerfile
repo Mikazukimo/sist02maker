@@ -9,4 +9,4 @@ RUN cd /src/nim_lang && nimble install -dy
 WORKDIR /src/nim_lang
 EXPOSE 5000
 
-ENTRYPOINT ["nim", "c", "-r", "-d:ssl","-d:release","--hints:off","src/sist02maker.nim"]
+ENTRYPOINT ["nim", "c", "-r", "-d:ssl","--hints:off","src/sist02maker.nim"]

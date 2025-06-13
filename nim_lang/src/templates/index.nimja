@@ -15,5 +15,5 @@
 {% endblock %}
 
 {% block footer %}
-    This is a test footer.
+    SIST02 Maker by zukimo
 {% endblock footer %}
