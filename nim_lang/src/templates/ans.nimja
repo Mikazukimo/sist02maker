@@ -3,11 +3,14 @@
 {% block content %}
 <body>
   <h1>出来上がったものがこちらです。</h1>
+  <p>書籍の著者に関しては適宜調節をしてください。こちらから操作すると正規表現で失敗しそうだったので(´・ω・｀)</p>
+  <p>書籍</p>
   <p>{{respons_isbn}}</p>
+  <p>論文記事</p>
   <p>{{respons_doi}}</p>
   <button type="button" onclick="history.back()">戻る</button>
 {% endblock %}
 
 {% block footer %}
-    SIST02 Maker by zukimo
+<center><p>SIST02 Maker by zukimo 2025</p></center>
 {% endblock footer %}

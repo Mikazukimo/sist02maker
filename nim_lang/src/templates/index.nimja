@@ -3,18 +3,28 @@
 {% block content %}
 <body>
   <h1>{{title}}</h1>
-  <h2>ISBNを入れてくれると自動的にSIST02にしてくれるようなプログラムになるはずです。</h2>
-  <p>ISBNを入力して、SIST02形式の引用を生成するはずです。</p>
+  <h2>ISBNとDOIから自動的にSIST02にしてくれるプログラムです。</h2>
+  <p>同時に入れても独立して検索します。</p>
   <form action="/sist02" method="post">
-    <p><label for="input">ISBNを入力してください:</label></p>
+    <p><label>ISBNを入れてください。</label></p>
     <p>ISBN：<input type="text" name="isbn"></p>
-    <p>（まだ工事中なので入れないでほしいです）doiの"10.20651/jslis.65.2_84"みたいなところだけ入れる：<input type="text" name="doi"></p>
-    <button type="submit">変換</button>
+    <p><label>DOIの"10.18919/jkg.67.1_25"みたいなところだけ入れてください。</label></p>
+    <p>DOI：<input type="text" name="doi"></p>
+    <p><button type="submit">変換</button></p>
   </form>
-  <p>今後の予定：DOIからもできるようにしたい。もうちょっとデザイン良くしたい。</p>
+  <p>データ取得元</p>
+  <p>ISBN：NDL api</p>
+  <p>DOI：JaLC api</p>
+  <p>そういうことなので、（書籍の方はともかく）論文に関しては見つからない可能性があります。ごめんなさい。</p>
+  <p>しかもDOIの方は結構無理やり整形してしまっているので、もっとうまくできる方いたらお願いします。</p>
+  <br>
+  <h2>小話</h2>
+  <p>開発環境：nim（v1） + Jester + nimja → render.com</p>
+  <p>今後の予定：もうちょっとデザイン良くしたい。現状講義で使ったCSS適用してるだけなので。</p>
+  <p>何かご連絡ございましたらこちらまで→<a href="https://x.com/zukimo_klis23">ずきものtwitter</a></p>
 </body>
 {% endblock %}
 
 {% block footer %}
-    SIST02 Maker by zukimo 2025
+<center><p>SIST02 Maker by zukimo 2025</p></center>
 {% endblock footer %}

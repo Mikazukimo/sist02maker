@@ -72,6 +72,8 @@ proc doi_searcher(doi:string):string=
         first_page = jsonNode["data"]["first_page"].getStr
         last_page = jsonNode["data"]["last_page"].getStr
         echo author & ". " & title & ". " & publisher & ", " & date & ", vol." & volume & ", no." & issue & ", p." & first_page & "-" & last_page & "."
+        let ans = author & ". " & title & ". " & publisher & ", " & date & ", vol." & volume & ", no." & issue & ", p." & first_page & "-" & last_page & "."
+        return ans
     except HttpRequestError as e:
         echo "リクエスト失敗: ", e.msg
         let ans = "ERROR"
