@@ -10,7 +10,6 @@
         </title>
     </head>
 
-<a href="/cje3.html">パスファインダー行き</a>
 {# The master can declare a variable that is later visible in the child template #}
 {% var aVarFromMaster = "aVarFromMaster" %}
 

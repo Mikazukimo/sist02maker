@@ -10,10 +10,10 @@
     <input type="text" name="isbn" required>
     <button type="submit">変換</button>
   </form>
-  <p>まだできないけどね。</p>
+  <p>今後の予定：DOIからもできるようにしたい。もうちょっとデザイン良くしたい。</p>
 </body>
 {% endblock %}
 
 {% block footer %}
-    SIST02 Maker by zukimo
+    SIST02 Maker by zukimo 2025
 {% endblock footer %}

@@ -4,6 +4,7 @@
 <body>
   <h1>出来上がったものがこちらです。</h1>
   <p>{{ans}}</p>
+  <button type="button" onclick="history.back()">戻る</button>
 {% endblock %}
 
 {% block footer %}
